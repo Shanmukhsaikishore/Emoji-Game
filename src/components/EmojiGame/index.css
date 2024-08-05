@@ -1,0 +1,24 @@
+.bg-container {
+  height: 100vh;
+  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+  display: flex;
+  flex-direction: column;
+}
+.emojis-container {
+  padding-left: 0px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .bg-container {
+    height: 100%;
+  }
+  .emojis-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
