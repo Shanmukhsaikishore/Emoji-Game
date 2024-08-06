@@ -4,13 +4,22 @@
   display: flex;
   flex-direction: column;
 }
+
 .emojis-container {
   padding-left: 0px;
   list-style-type: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 40px;
+  width: 600px;
+  margin-top: 0px;
+}
+
+.bottom-section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -18,7 +27,11 @@
     height: 100%;
   }
   .emojis-container {
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 100%;
+  }
+  .bottom-section {
+    height: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }

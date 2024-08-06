@@ -3,31 +3,30 @@
 }
 .emoji-button {
   background-color: #ffffff33;
-  height: 180px;
-  width: 180px;
+  height: 130px;
+  width: 130px;
   border: 3px solid #ffffff30;
   border-radius: 10px;
   cursor: pointer;
   outline: none;
 }
 .emoji-image {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 @media screen and (max-width: 767px) {
   .emoji-image {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
   }
   .emoji-button {
-    height: 120px;
-    width: 120px;
-  }
-  .emoji-button {
+    height: 130px;
+    width: 130px;
     border-radius: 20px;
   }
+
   .emoji-card {
-    margin: 5px;
+    margin: 10px;
   }
 }

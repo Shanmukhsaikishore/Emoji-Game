@@ -8,11 +8,6 @@ const shuffledEmojisList = () => {
   return emojisList.sort(() => Math.random() - 0.5)
 }
 
-        <ul className="emojis-container">
-          {emojisList.map(eachItem => (
-            <EmojiCard key={eachItem.id} emojiDetails={eachItem} />
-          ))}
-        </ul>
 
 */
 
@@ -71,20 +66,22 @@ class EmojiGame extends Component {
     return (
       <div className="bg-container">
         <NavBar score={score} topScore={topScore} isLost={isLost} />
-        {!isLost && score !== 12 ? (
-          <ul className="emojis-container">
-            {emojisList.map(eachItem => (
-              <EmojiCard
-                key={eachItem.id}
-                emojiDetails={eachItem}
-                onClickEmoji={this.onClickEmoji}
-                shuffledEmojisList={this.shuffledEmojisList}
-              />
-            ))}
-          </ul>
-        ) : (
-          <WinOrLoseCard score={score} onPlayAgain={this.onPlayAgain} />
-        )}
+        <div className="bottom-section">
+          {!isLost && score !== 12 ? (
+            <ul className="emojis-container">
+              {emojisList.map(eachItem => (
+                <EmojiCard
+                  key={eachItem.id}
+                  emojiDetails={eachItem}
+                  onClickEmoji={this.onClickEmoji}
+                  shuffledEmojisList={this.shuffledEmojisList}
+                />
+              ))}
+            </ul>
+          ) : (
+            <WinOrLoseCard score={score} onPlayAgain={this.onPlayAgain} />
+          )}
+        </div>
       </div>
     )
   }
